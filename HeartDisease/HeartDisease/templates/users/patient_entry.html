@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Entry</title>
+</head>
+<body>
+    <div class='container'>
+        <h2>Patient Registration</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}  <!-- Display the form fields from the form object -->
+            <button type="submit">Save</button>
+        </form>
+
+        <a href="{% url 'history' %}"><btn>View History</btn></a>  <!-- Link to history -->
+    </div>
+            
+
+    
+</body>
+</html>
